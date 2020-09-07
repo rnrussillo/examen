@@ -1,0 +1,31 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="create-clients" author="Rodrigo Nicolas Russillo">
+        <sql>
+            INSERT INTO `client` (`full_name`, `email`,`dni`)
+            VALUES ('Cliente 1', 'mail1@mail1','1111111');
+            INSERT INTO `client` (`full_name`, `email`,`dni`)
+            VALUES ('Cliente 2', 'mail2@mail2','22222');
+
+        </sql>
+    </changeSet>
+    <changeSet id="create-products" author="Rodrigo Nicolas Russillo">
+        <sql>
+            INSERT INTO `product` (`name`, `description`,`price`)
+            VALUES ('peluche rinoceronte', 'un suave peluche de rinoceronte','22.33');
+            INSERT INTO `product` (`name`, `description`,`price`)
+            VALUES ('celular barato', 'un celular basico y barato','100.5');
+        </sql>
+    </changeSet>
+    <changeSet id="create-seller" author="Rodrigo Nicolas Russillo">
+        <sql>
+            INSERT INTO `seller` (`full_name`, `email`,`dni`)
+            VALUES ('vendedor 1', 'mail1@mail1','1111111');
+            INSERT INTO `seller` (`full_name`, `email`,`dni`)
+            VALUES ('vendedor 2', 'mail2@mail2','22222');
+        </sql>
+    </changeSet>
+</databaseChangeLog>
